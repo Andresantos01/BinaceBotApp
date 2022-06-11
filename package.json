@@ -1,0 +1,20 @@
+{
+  "name": "binacebotapp",
+  "version": "1.0.0",
+  "description": "This bot will monitor the cryptocurrency market and show the time to buy when the currency is low and sell when it is high",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andresantos01/BinaceBotApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andresantos01/BinaceBotApp/issues"
+  },
+  "homepage": "https://github.com/Andresantos01/BinaceBotApp#readme"
+}
