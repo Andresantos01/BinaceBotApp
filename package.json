@@ -4,6 +4,7 @@
   "description": "This bot will monitor the cryptocurrency market and show the time to buy when the currency is low and sell when it is high",
   "main": "index.js",
   "scripts": {
+    "dev":"node -r dotenv/config src/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Andresantos01/BinaceBotApp/issues"
   },
-  "homepage": "https://github.com/Andresantos01/BinaceBotApp#readme"
+  "homepage": "https://github.com/Andresantos01/BinaceBotApp#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  }
 }
