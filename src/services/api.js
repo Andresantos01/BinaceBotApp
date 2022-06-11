@@ -23,6 +23,11 @@ class ApiBinance
     {
         return this.#publicCall('/v3/time')
     }
+
+    async depth(symbol = process.env.SYMBOL, limit = process.env.LIMIT)
+    {
+        return this.#publicCall(`/v3/depth?symbol=${symbol}&limit=${limit}`)
+    }
 }
 
-module.exports = ApiBinance
+module.exports = {ApiBinance}
