@@ -1,10 +1,16 @@
 let {ApiBinance} = require('./services/api')
-setInterval( async ()=>{
-    const apibinance = new ApiBinance()
-    const resultApi = await apibinance.time()
-    //return console.log(resultApi)
+class App extends ApiBinance
+{
+  constructor(){super()}
+    MomentsBuyOrSell()
+    {
+        setInterval(async ()=>{
+            const depth = await this.depth()
+            console.log(`Highest Buy: ${depth.bids[0][0]}`)
+            console.log(`Lowest Sell: ${depth.asks[0][0]}`)
+        }, process.env.CRAWLER_INTERVAL)  
+    }
+}
 
-    const depth = await apibinance.depth()
-    return console.log(depth)
-    
-}, process.env.CRAWLER_INTERVAL)
+const app = new App()
+app.MomentsBuyOrSell()
